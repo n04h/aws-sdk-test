@@ -12,12 +12,13 @@ const { DynamoDB } = require("@aws-sdk/client-dynamodb");
     const params = {
       TableName: "AwsSdkTest",
       Item: {
-        id: { N: "2" },
-        name: { S: "fuga" },
+        id: { N: "3" },
+        name: { S: "huga" },
         string_set: { SS: ["mozi001", "mozi002"] },
         int_set: { NS: ["1", "2"] },
         bool: { BOOL: true },
         null: { NULL: true },
+        map: { M: { "aaa": { S: "a" }, "bbb": { S: "b" }, "ccc": { N: "2" } } }
       }
     }
 
